@@ -1,9 +1,9 @@
 # SDL Piano Tiles
 
 # About
-A simple piano tiles game made using SDL2 in C++
-Made in roughly 2 days
-Made as a simple introduction to 2D game development without the use of a game engine
+- A simple piano tiles game made using SDL2 in C++
+- Made in roughly 2 days
+- Made as a simple introduction to 2D game development without the use of a game engine
 
 # Contents
 - a very barebones main menu, with key press handling for changing different game settings including max rows and max tiles
