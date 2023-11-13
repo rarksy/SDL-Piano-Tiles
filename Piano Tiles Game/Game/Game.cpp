@@ -9,14 +9,12 @@
 
 Game::Game()
 {
-    // Init SDL
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
         throw std::runtime_error("SDL_Init Failed!");
 
     if (TTF_Init() == -1)
         throw std::runtime_error("TTF_Init Failed!");
-
-    // Create SDL window
+    
     this->window = SDL_CreateWindow("SDL Piano Tiles",
                                     SDL_WINDOWPOS_CENTERED,
                                     SDL_WINDOWPOS_CENTERED,
@@ -26,8 +24,7 @@ Game::Game()
 
     if (!this->window)
         throw std::runtime_error("window == nullptr!");
-
-    // Create SDL renderer
+    
     this->renderer = SDL_CreateRenderer(this->window, -1, 0);
 
     if (!this->renderer)
@@ -200,7 +197,6 @@ void Game::RunGame()
 
                     if (!tile.targetTile)
                     {
-                        // user clicked an incorrect but VALID tile
                         this->failed = true;
                         break;
                     }
